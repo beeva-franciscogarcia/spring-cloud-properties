@@ -1,0 +1,37 @@
+server:
+  port: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+microservice:
+  uuid-generator: microservice-uuid-generator
+
+person:
+  uuidSourceName: microservice-uuid-generator
+  namePool:
+    - Juan Manuel
+    - Daniel
+    - Cristina
+    - Laura
+    - Jesús
+    - Pablo
+    - Tomás
+    - Clara
+  surnamePool:
+    - Pérez
+    - Rodríguez
+    - Gaitero
+    - Carrasco
+    - Aranda
+    - Gómez
+    - Muñoz
+  #name: Juan Manuel
+  #surname: Pérez
+  #age: 34
+  #location: Centro de Innovación

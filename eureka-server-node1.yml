@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: eureka-1    # To launch several instances of eureka locally, you need to bind this host to 127.0.0.1 in /etc/hosts
+    leaseRenewalIntervalInSeconds: 30
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-2:8762/eureka/
+  metadataMap:
+    instanceId: eureka-server-node1
